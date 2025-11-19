@@ -1,6 +1,18 @@
-def main():
-    print("hello world")
+import pandas as pd
+from matplotlib import pyplot as plt
 
 
-if __name__ == "__main__":
-    main()
+plt.style.use('seaborn-v0_8-pastel')
+
+
+df = pd.read_csv('ClassDataset2025 - class-dataset.csv')
+print(df.info())
+
+birthYear = df['Birth Year']
+birthDay = df['Birth Day']
+
+plt.scatter(birthYear, birthDay)
+
+plt.savefig('scatter.png')
+plt.close()
+
