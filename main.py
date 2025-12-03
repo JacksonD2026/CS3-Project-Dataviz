@@ -19,27 +19,27 @@ plt.xlabel('Birth Year')
 plt.ylabel('Birth Day')
 plt.axis('equal')
 
-plt.savefig('scatter.png')
+plt.savefig('birt.png')
 plt.close()
 
 Jewish = df['Jewish']
 Flavor = df['Flavor']
 
-plt.bar(Jewish, Flavor)
+plt.scatter(Jewish, Flavor)
 
 plt.title('Jewish VS Flavor')
 plt.xlabel('Jewish')
 plt.ylabel('Flavor')
 plt.axis('equal')
 
-plt.savefig('bar.png')
+plt.savefig('scatter.png')
 plt.close()
 
 
 Years_At_BWL = df['Years at BWL']
 B5_Openness = df['BigFive Openness']
 
-plt.plot(Years_At_BWL, B5_Openness)
+plt.scatter(Years_At_BWL, B5_Openness)
 plt.title('How open does BWL make you?')
 plt.xlabel('Years at BWL')
 plt.ylabel('BigFive Openness')
